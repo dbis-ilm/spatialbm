@@ -29,7 +29,25 @@ On the cluster we have Hadoop 2.7, Spark 2.0.0 (and Spark 1.6.1 if needed), Java
 ## Spatial Filter Queries
 The following images shows a spatial filter operator on a polygon data set with 50,000,000 polygons (880 GB)
 
-*TODO*
+*TODO*: create image
+
+### Impact of query range size
+* *SpatialHadoop*
+ ![Query range size SpatialHadoop](figs/spatialhadoop_25.png)
+* *SpatialSpark*
+ ![Query range size SpatialSpark](figs/spatialspark_25.png)
+* *GeoSpark*
+ ![Query range size GeoSpark](figs/geospark_25.png)
+* *STARK*
+ ![Query range size STARK](figs/stark_25.png)
 
 ## Spatial Join Queries
-*TODO*
+Self-join with 1,000,000 points data set (500MB) showing best partitioner for no and live indexing
+![Self-join points](figs/join.png)
+
+Comparing self-join results without partitioning with best partitioner for live indexing:
+![Self-join points](figs/join2.png)
+
+# TODOs
+* add runner files
+* generate missing images
