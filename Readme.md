@@ -41,12 +41,18 @@ The following images shows a spatial filter operator on a polygon data set with 
 * *STARK*
  ![Query range size STARK](figs/stark_25.png)
 
+### Point Query on Polygon DS
+![PolyPoint](figs/filter_polypoint_compare.png)
+
+### Range Query (Polygon) on Polygon DS
+![PolyPoint](figs/filter_polypoly.png)
+
 ## Spatial Join Queries
-Self-join with 1,000,000 points data set (500MB) showing best partitioner for no and live indexing
+Self-join with 1,000,000 and 10,000,000 point data sets for STARK with the both partitioners.
 ![Self-join points](figs/join.png)
 
-Comparing self-join results without partitioning with best partitioner for live indexing:
-![Self-join points](figs/join2.png)
+Comparing the Self-join results for STARK and GeoSpark with the best partitioner for each platform. **Note:** GepSpark produced wrong results and ~ 100.000 result tuples were missing in both cases.
+![Self-join points](figs/join_compare.png)
 
 # TODOs
 * add runner files
